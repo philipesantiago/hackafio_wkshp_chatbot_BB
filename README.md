@@ -43,8 +43,25 @@ http://bit.ly/35KYpnS
 ![alt text]( https://github.com/philipesantiago/hackafio_wkshp_chatbot_BB/blob/master/qrcode_link_teste.PNG "Workshop BB Chatbot Hackafio 2019")
 
 
+## Utilizando outras soluções para Chatbot
+
+As etapas de descoberta, ideação e design podem ser implementadas em outras ferramentas como o Rasa, Amazon Lex, Microsoft Bot Framework e Google Dialog Flow.
+
+Outras ferramentas interessantes para facilitar as primeira etapas citadas são:
+
+http://freemind.sourceforge.net/wiki/index.php/Main_Page (Mapa Mental open source)
+https://www.mindmup.com/ (Mapa Mental colaborativo online)
+https://coggle.it/ (Mapa Mental colaborativo online)
+https://bubbl.us/ (Mapa Mental colaborativo online)
+
+https://botsociety.io/ (Protótipos mockados)
+https://botframe.com/ (Protótipos mockados)
+
+https://botmock.com/ (Design de Diálogos)
 
 
+### Migração do Watson para Rasa
+Para os corpos de conhecimento criados na plataforma Watson da IBM, o Banco do Brasil fez uma contribuição à comunidade open source com um script de migração do Watson para Rasa disponível em: https://github.com/RasaHQ/rasa/compare/master...ralphg6:migrate_watson
 
 
 
