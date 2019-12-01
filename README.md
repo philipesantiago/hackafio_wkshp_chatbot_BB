@@ -31,7 +31,17 @@ A prototipação, validaçãoç e construção foram realizadas no IBM Watson As
 - criação de uma conta na IBM Cloud em: https://cloud.ibm.com/registration
 - criação de recurso do Watson Assistant Plano Lite (gratuito): https://cloud.ibm.com/catalog/services/watson-assistant
 
-As etapa de avaliação foi realizada via link de previsualização disponibilizado publicamente em uma integração web já implementada no IBM Watson. Apresentamos aos participantes o QRCode gerado em: https://br.qr-code-generator.com/
+A etapa de avaliação foi realizada via link de previsualização disponibilizado publicamente em uma integração web já implementada no IBM Watson. Apresentamos aos participantes o QRCode gerado em: https://br.qr-code-generator.com/
+
+
+## Teste o chatbot construído abaixo:
+
+
+http://bit.ly/35KYpnS
+
+
+![alt text]( https://github.com/philipesantiago/hackafio_wkshp_chatbot_BB/blob/master/qrcode_link_teste.PNG "Workshop BB Chatbot Hackafio 2019")
+
 
 
 
