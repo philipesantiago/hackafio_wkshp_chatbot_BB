@@ -1,0 +1,645 @@
+{
+  "name": "Hackafio 2019",
+  "intents": [
+    {
+      "intent": "saudacao",
+      "examples": [
+        {
+          "text": "boa noite"
+        },
+        {
+          "text": "eae"
+        },
+        {
+          "text": "e ai"
+        },
+        {
+          "text": "ola"
+        },
+        {
+          "text": "oi"
+        },
+        {
+          "text": "bom dia"
+        },
+        {
+          "text": "boa tarde"
+        },
+        {
+          "text": "tudo bem"
+        },
+        {
+          "text": "Oo"
+        },
+        {
+          "text": "Opa"
+        },
+        {
+          "text": "boa madrugada"
+        }
+      ]
+    },
+    {
+      "intent": "tuberculose",
+      "examples": []
+    },
+    {
+      "intent": "agradecimento",
+      "examples": [
+        {
+          "text": "tchau"
+        },
+        {
+          "text": "Até amanhã"
+        }
+      ]
+    },
+    {
+      "intent": "inscricao",
+      "examples": [
+        {
+          "text": "como posso participar"
+        },
+        {
+          "text": "como me inscrevo"
+        },
+        {
+          "text": "quero me inscrever"
+        },
+        {
+          "text": "quero participar"
+        },
+        {
+          "text": "inscricoes"
+        },
+        {
+          "text": "Inscrição"
+        }
+      ]
+    },
+    {
+      "intent": "arborviroses",
+      "examples": [
+        {
+          "text": "o que é arbovirose"
+        },
+        {
+          "text": "qual sera o desafio de arbovirose"
+        }
+      ]
+    },
+    {
+      "intent": "como_chegar",
+      "examples": [
+        {
+          "text": "como faço para chegar"
+        },
+        {
+          "text": "qual é o endereço"
+        },
+        {
+          "text": "onde fica a fio cruz"
+        },
+        {
+          "text": "como chegar"
+        }
+      ]
+    },
+    {
+      "intent": "desafios",
+      "examples": [
+        {
+          "text": "o que vai acontecer"
+        },
+        {
+          "text": "desafios"
+        },
+        {
+          "text": "qual a programação"
+        },
+        {
+          "text": "quais serão os desafios"
+        }
+      ]
+    },
+    {
+      "intent": "carrapatos",
+      "examples": []
+    },
+    {
+      "intent": "conceito_hackathon",
+      "examples": [
+        {
+          "text": "o que é um hackathon"
+        },
+        {
+          "text": "que é hack"
+        }
+      ]
+    },
+    {
+      "intent": "data_horario_local",
+      "examples": [
+        {
+          "text": "data"
+        },
+        {
+          "text": "vai ter edicao em 2020"
+        },
+        {
+          "text": "hackathon em dezembro"
+        },
+        {
+          "text": "terá hackathon em novembro"
+        },
+        {
+          "text": "quando será o evento"
+        },
+        {
+          "text": "onde será o evento"
+        },
+        {
+          "text": "Que horas começa?"
+        },
+        {
+          "text": "qual é o horário"
+        }
+      ]
+    },
+    {
+      "intent": "saber_mais",
+      "examples": [
+        {
+          "text": "nao gostei"
+        },
+        {
+          "text": "bot burro"
+        },
+        {
+          "text": "quero saber mais"
+        },
+        {
+          "text": "que porcaria"
+        }
+      ]
+    },
+    {
+      "intent": "chatbot",
+      "examples": []
+    }
+  ],
+  "entities": [
+    {
+      "entity": "desafios",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "carrapato",
+          "synonyms": [
+            "carrapato",
+            "carrapatos"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "tuberculose",
+          "synonyms": [
+            "tuberculose",
+            "febre maculosa"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "chatbot",
+          "synonyms": [
+            "fale conosco",
+            "chat",
+            "bot",
+            "robo"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "arbovirose",
+          "synonyms": [
+            "zika",
+            "dengue",
+            "chicongunha"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "opcoes",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "A",
+          "synonyms": [
+            "a"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "D",
+          "synonyms": [
+            "d"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "C",
+          "synonyms": [
+            "c"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "B",
+          "synonyms": [
+            "b"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "language": "pt-br",
+  "metadata": {
+    "api_version": {
+      "major_version": "v1",
+      "minor_version": "2018-09-20"
+    }
+  },
+  "skill_id": "325a0942-ebf1-4dcb-adde-6df349e82b2a",
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "jump_chatbot",
+      "parent": "node_5_1575157371956",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_8_1575157781881"
+      },
+      "conditions": "@desafios:chatbot || @opcoes:C",
+      "dialog_node": "node_3_1575158193250",
+      "previous_sibling": "node_4_1575158032929"
+    },
+    {
+      "type": "standard",
+      "title": "jump_tuberculose",
+      "parent": "node_5_1575157371956",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1575157945033"
+      },
+      "conditions": "@desafios:tuberculose || @opcoes:D",
+      "dialog_node": "node_8_1575158583001",
+      "previous_sibling": "node_3_1575158193250"
+    },
+    {
+      "type": "standard",
+      "title": "jump_carrapato",
+      "parent": "node_5_1575157371956",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1575157756857"
+      },
+      "conditions": "@desafios:carrapato || @opcoes:B",
+      "dialog_node": "node_4_1575158032929",
+      "previous_sibling": "node_10_1575158016474"
+    },
+    {
+      "type": "standard",
+      "title": "jump_arboviroses",
+      "parent": "node_5_1575157371956",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_9_1575157680281"
+      },
+      "conditions": "@desafios:(arbovirose) || @opcoes:A",
+      "dialog_node": "node_10_1575158016474"
+    },
+    {
+      "type": "standard",
+      "title": "node_carrapatos",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Resposta carrapatos"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#carrapatos",
+      "dialog_node": "node_1_1575157756857",
+      "previous_sibling": "node_9_1575157680281"
+    },
+    {
+      "type": "standard",
+      "title": "node_como_chegar",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "O evento ocorre na Fio Cruz no Rio de Janeiro.\nAcesse aqui para definir sua rota:\nhttp://bit.ly/2R6YtKT"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#como_chegar",
+      "dialog_node": "node_10_1575157254186",
+      "previous_sibling": "node_3_1575157209809"
+    },
+    {
+      "type": "standard",
+      "title": "node_arboviroses",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Resposta Arboviroses"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_10_1575158016474"
+      },
+      "conditions": "#arborviroses",
+      "dialog_node": "node_9_1575157680281",
+      "previous_sibling": "node_5_1575157371956"
+    },
+    {
+      "type": "standard",
+      "title": "Em outros casos",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Desculpe, mas não entendi. Você pode escrever de outra forma?"
+              },
+              {
+                "text": "Desculpe, ainda estou aprendendo. Mas adorei que você está participando deste teste."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Em outros casos",
+      "previous_sibling": "node_7_1575159601611",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "node_data_horario_local",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "O Hackafio 2019 acontece de 30.11 a 01.12 na Fiocruz no Rio de Janeiro."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#data_horario_local",
+      "dialog_node": "node_8_1575157340779",
+      "previous_sibling": "node_1_1575157309130"
+    },
+    {
+      "type": "standard",
+      "title": "node_saber_mais",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Para saber mais entre em contato conosco\nhttps://twitter.com/fiocruz\nhttps://hackathon.icict.fiocruz.br/\nhttp://bit.ly/33EHPEJ"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#saber_mais",
+      "dialog_node": "node_3_1575157585817",
+      "previous_sibling": "node_2_1575157945033"
+    },
+    {
+      "type": "standard",
+      "title": "node_tuberculose",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Resposta tuberculose."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#tuberculose",
+      "dialog_node": "node_2_1575157945033",
+      "previous_sibling": "node_8_1575157781881"
+    },
+    {
+      "type": "standard",
+      "title": "node_conceito_hackathon",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hackathon é uma combinação entre os termos hack (programar) e marathon (maratona) e é um ambiente ideal para o desenvolvimento da inovação e resolução de problemas."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#conceito_hackathon",
+      "dialog_node": "node_3_1575157209809",
+      "previous_sibling": "Bem-vindo"
+    },
+    {
+      "type": "standard",
+      "title": "node_desafios",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Teremos 4 desafios no Hackafio 2019:\nA - Arboviroses\nB - Carrapatos\nC - Chatbots\nD - Tuberculose"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#desafios",
+      "dialog_node": "node_5_1575157371956",
+      "previous_sibling": "node_8_1575157340779"
+    },
+    {
+      "type": "standard",
+      "title": "node_chatbot",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Resposta chatbot."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#chatbot",
+      "dialog_node": "node_8_1575157781881",
+      "previous_sibling": "node_1_1575157756857"
+    },
+    {
+      "type": "standard",
+      "title": "node_inscricao",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "As inscrições estão encerradas para edição de 2019, mas comente no nosso Twitter com #vemHackafio2020  https://twitter.com/fiocruz"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#inscricao",
+      "dialog_node": "node_1_1575157309130",
+      "previous_sibling": "node_10_1575157254186"
+    },
+    {
+      "type": "standard",
+      "title": "node_agradecimento",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Muito obrigado por conversar comigo."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "time": 3000,
+            "typing": true,
+            "response_type": "pause"
+          },
+          {
+            "values": [
+              {
+                "text": "Você está ajudando bastante a testar este bot. :)"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#agradecimento",
+      "dialog_node": "node_7_1575159601611",
+      "previous_sibling": "node_3_1575157585817"
+    },
+    {
+      "type": "standard",
+      "title": "Bem-vindo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Bem vindo ao Hackathon 2019 da Fiocruz!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "time": 2000,
+            "typing": true,
+            "response_type": "pause"
+          },
+          {
+            "values": [
+              {
+                "text": "Pergunte-me sobre como chegar, inscrições, onde será, o que um hackathon ou ainda quais serão os desafios."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "conditions": "welcome || #saudacao",
+      "dialog_node": "Bem-vindo"
+    }
+  ],
+  "workspace_id": "325a0942-ebf1-4dcb-adde-6df349e82b2a",
+  "counterexamples": [],
+  "system_settings": {
+    "tooling": {
+      "store_generic_responses": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": ""
+    },
+    "human_agent_assist": {
+      "prompt": "Você quis dizer:"
+    }
+  },
+  "learning_opt_out": false,
+  "status": "Available"
+}
