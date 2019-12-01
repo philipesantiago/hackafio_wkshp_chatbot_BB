@@ -1,5 +1,5 @@
-# hackafio_wkshp_chatbot_BB
-Workshop de construção de chatbots Hackafio 2019
+# hackafio 2019 - Workshop de construção de chatbots Hackafio 2019
+
 
 Workshop sobre chatbots do Banco do Brasil ministrado no Hackathon 2019 FioCruz.
 
