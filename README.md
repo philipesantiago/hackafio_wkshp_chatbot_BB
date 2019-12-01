@@ -1,8 +1,14 @@
-# hackafio 2019 - Workshop de construção de chatbots Hackafio 2019
+# Workshop de construção de chatbots Hackafio 2019
 
 
 Workshop sobre chatbots do Banco do Brasil ministrado no Hackathon 2019 FioCruz.
 
+
+## Material disponível
+Neste repositório estão compartilhados os arquivos referentes aos mapas mentais e ao corpo de conhecimento exportado do IBM Watson.
+
+
+## Saiba mais sobre o workshop
 O workshop abordou os desafios de construção de um chatbot para perguntas e respostas mais frequentes.
 
 Apresentamos em linhas gerais o ciclo contínuo de UX utilizado no BB:
@@ -29,8 +35,6 @@ As etapa de avaliação foi realizada via link de previsualização disponibiliz
 
 
 
-
-Neste repositório estão compartilhados os arquivos referentes aos mapas mentais e ao corpo de conhecimento exportado do IBM Watson.
 
 
 
